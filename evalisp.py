@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 '''
-EvaLisp is an evaluator for simple and limited Lisp expressions.
+Eva Lisp is an evaluator for simple and limited Lisp expressions.
 '''
 
 from cin import cinput
@@ -48,3 +48,15 @@ def calc(operator, exp1, exp2):
         return exp1 / exp2
     else:
         raise ExpressionSyntaxError('Unknow operator, ' + operator)
+
+if __name__ == '__main__':
+    print("Hello! My name is Eva Lisp. Call me Eva.")
+    print("I can help you evaluate simple Lisp expressions.")
+
+    while True:
+        try:
+            print("> ", end='')
+            print(expression())
+        except (EOFError, KeyboardInterrupt):
+            print("Bye!")
+            break
